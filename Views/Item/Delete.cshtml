@@ -1,0 +1,27 @@
+@model ShopeeShop_web.Models.Item
+
+<div class="card">
+    <input asp-for="Id" hidden>
+        <form method="post" class="form-horizontal">
+            <div class="card-body">
+            <h4 class="card-title">Delete Item</h4>
+            <div class="form-group row">
+                <label asp-for="Name"></label>
+                <div class="col-sm-6">
+                <input asp-for="Name" disabled
+                    type="text"
+                    class="form-control"
+                    placeholder="Item Name Here"/>
+              </div>
+             
+            </div>   
+            <div class="border-top">
+                 <div class="card-body">
+                     <input type="submit" class="btn btn-danger" value="Delete">
+                        <a asp-action="Index" class="btn btn-success">
+                            Back
+                        </a>
+                </div>
+            </div>
+        </form>
+    </div>
